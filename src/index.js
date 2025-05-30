@@ -1,9 +1,14 @@
+
+
+import home from "./home.js";
+
 class toDo{
-    constructor(title,description,dueDate,priority){
+    constructor(title,description,dueDate,priority,completed){
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.completed = completed;
     }
 
     get list(){
@@ -16,15 +21,14 @@ class toDo{
             this.description = _list.description ?? this.description;
             this.dueDate = _list.dueDate ?? this.dueDate;
             this.priority = _list.priority ?? this.priority;
+            this.completed = _list.completed ?? this.completed;
         }
     }
 }
 
 class Project{
-    constructor(){ //we set default of toDoList to array if one is not provided
-
+    constructor(){ 
         this._toDoList = new Map();
-        
     }
 
     addToDo(toDoName, toDoItem){
@@ -42,10 +46,13 @@ class Project{
     }
 }
 
+
+//home();
+
 const workoutPlan = new Project;
 
-const dumbellPress = new toDo("10 reps Dumbell Press","I will press the dumbells 10 times","08-15-2024",2);
-const dumbellPresss = new toDo("10 reps Dumbell Press","I will press the dumbells 10 times","08-15-2024",2);
+const dumbellPress = new toDo("10 reps Dumbell Press","I will press the dumbells 10 times","08-15-2024",2,false);
+const dumbellPresss = new toDo("10 reps Dumbell Press","I will press the dumbells 10 times","08-15-2024",2,false);
 workoutPlan.addToDo("press1",dumbellPress);
 workoutPlan.addToDo("press2",dumbellPresss);
 
