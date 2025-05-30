@@ -93,13 +93,15 @@ nav > button{
     gap: 8px;
     justify-content: left;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border: 2px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--secondary-highlight-color);
-    padding:8px 16px;
+    padding:16px 16px;
     cursor: pointer;
-
+    width:200px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .new-project > svg{
