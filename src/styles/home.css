@@ -1,0 +1,125 @@
+:root{
+
+  --primary-color: #1E1E1E;
+  --secondary-color: #121212;
+  --primary-highlight-color: #7289da;
+  --secondary-highlight-color: #BB86FC;
+  --hover-color: #242428;
+  --primary-text-color: #F8F9FA;
+  --secondary-text-color:#4a4c51;
+  --primary-font: gg-sans, sans-serif;
+  --bold-font: gg-sans-bold, sans-serif;
+  --semibold-font: gg-sans-semibold, sans-serif;
+  --medium-font: gg-sans-medium, sans-serif;
+  --border-color: #495057;
+}
+
+body,
+html {
+  min-height: 100vh;
+  margin: 0;
+  color:var(--primary-text-color);
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+}
+
+/* header */
+
+.header{
+    grid-column: 2/3;
+    grid-row:1/2;
+    background-color: var(--primary-color);
+    padding:16px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+nav{
+    display:flex;
+    justify-content: center;
+}
+
+button{
+    border:0;
+}
+
+/* sidebar */
+
+.sidebar{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: var(--primary-color);
+    border-right: 2px solid var(--border-color);
+    padding:16px;
+}
+
+.sidebar-title{
+    display:flex;
+    gap: 8px;
+    justify-content: left;
+    align-items: center;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.sidebar-title > svg{
+    width:2rem;
+    height:2rem;
+}
+
+.new-project{
+    margin-top: 16px;
+    display:flex;
+    gap: 8px;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--secondary-highlight-color);
+    padding:8px 16px;
+    
+}
+
+.new-project > svg{
+    width:1.5rem;
+    height:1.5rem;
+}
+
+.item{
+    display:flex;
+    gap: 8px;
+    justify-content: left;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
+.menu{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 48px;
+  margin-bottom: 4rem;
+}
+
+svg{
+  fill: white;
+  height: 1.3rem;
+  width: 1.3rem;
+  
+}
+
+/* content */
+
+.content{
+    background-color: var(--secondary-color);
+}
+
