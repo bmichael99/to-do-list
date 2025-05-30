@@ -87,6 +87,7 @@ function DOM(){
         displayToDoItems(currentProject);
         
         toDoForm.reset();
+        toDoDialog.close();
     });
 
     projectSubmit.addEventListener("click", (event) => {
@@ -97,6 +98,8 @@ function DOM(){
         displayNewProject(newProject);
         projectForm.reset();
         projectDialog.close();
+        currentProject = newProject;
+        displayToDoItems(currentProject);
     });
 
     function displayNewProject(project){
